@@ -5,4 +5,4 @@ Feature: Búsqueda en Airbnb
 
     Given que me enuentro en el login de Airbnb
     When busco "Cancun Mexico"
-    Then muestra el texto "Over 1,000 stays"
+    Then muestra el texto "Display total before taxes"

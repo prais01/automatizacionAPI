@@ -23,9 +23,9 @@ public class AirbnbSearchStepsDefs {
     public void busco(String place) {
         airbnbSearchSteps.searchByText(place);
     }
+
     @Then("muestra el texto {string}")
     public void muestra_el_texto(String text) {
-
         Assert.assertEquals(airbnbSearchSteps.getResultText(), text);
     }
 

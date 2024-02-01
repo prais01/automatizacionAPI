@@ -21,7 +21,7 @@ public class LoginScreen extends PageObject {
 
         btnClose.click();
 
-
-
     }
+
+
 }

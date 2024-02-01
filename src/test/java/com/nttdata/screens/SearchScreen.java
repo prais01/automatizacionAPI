@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 
 public class SearchScreen extends PageObject {
 
-    @AndroidFindBy(id = "2131432049")
+    @AndroidFindBy(id = "com.airbnb.android:id/search_bar")
     private WebElement searchInput;
 
-    @AndroidFindBy(id = "2131431007")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Display total before taxes\"]")
     private WebElement resultText;
 
     public void clickSearchInput(){
