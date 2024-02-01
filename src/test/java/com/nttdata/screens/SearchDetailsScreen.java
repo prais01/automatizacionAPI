@@ -18,13 +18,27 @@ public class SearchDetailsScreen extends PageObject {
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.LinearLayout/android.widget.TextView")
     private WebElement firstOption;
 
+    @AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"com.airbnb.android:id/title\" and @text=\"Vichayito, Peru\"]")
+    private WebElement firstOpciones;
+
     @AndroidFindBy(id = "com.airbnb.android:id/n2_simple_search_footer_gradient_button")
     private WebElement nextButton;
+
+    @AndroidFindBy(id = "com.airbnb.android:id/n2_simple_search_footer_link")
+    private WebElement nextSkip;
 
     @AndroidFindBy(id = "com.airbnb.android:id/n2_dls_action_footer_gradient_button")
     private WebElement searchButton;
 
+    @AndroidFindBy(id = "com.airbnb.android:id/n2_dls_action_footer_gradient_button")
+    private WebElement searchButtons;
+
     public void enterSearchInput(String place){
+        /*try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
         searchDetailInput.click();
         searchDetailInputText.sendKeys(place);
     }
@@ -40,4 +54,17 @@ public class SearchDetailsScreen extends PageObject {
     public void clickSearch(){
         searchButton.click();
     }
+
+    public void clickFirstOptionExamen(){
+        firstOpciones.click();
+    }
+
+    public void clickSkip() {
+        nextSkip.click();
+    }
+
+    public void clickSearchExamen() {
+        searchButtons.click();
+    }
+
 }
