@@ -15,12 +15,19 @@ public class entelPreprodSteps {
       //  entelPreprodScreens.clickSearchInputNum();
         searchScreen.enterSearchInput(nume);
     }
-*/
+*//*
     @Step
     public void numeroCliente() {
         entelPreprodScreens.clickSearchInputNum();
+    }*/
+
+    @Step
+    public void numeroUsuario(String numero){
+        entelPreprodScreens.clickSearchInputNum();
+        entelPreprodScreens.ingresarNumero(numero);
     }
 
-
-
+    public void botonContinuar() {
+        entelPreprodScreens.clicContinuar();
+    }
 }
